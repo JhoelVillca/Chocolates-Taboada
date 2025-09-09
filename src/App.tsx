@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard';
 import ProductsModule from './components/ProductsModule';
 import SalesModule from './components/SalesModule';
 import ProductionModule from './components/ProductionModule';
+import PayrollModule from './components/PayrollModule';
 
 function App() {
   const [activeModule, setActiveModule] = useState('dashboard');
@@ -18,6 +19,8 @@ function App() {
         return <SalesModule />;
       case 'production':
         return <ProductionModule />;
+      case 'payroll':
+        return <PayrollModule />;
       default:
         return <Dashboard />;
     }

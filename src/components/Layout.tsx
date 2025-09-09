@@ -1,12 +1,13 @@
 import React from 'react';
-import { 
-  Package, 
-  ShoppingCart, 
-  Factory, 
-  BarChart3, 
+import {
+  Package,
+  ShoppingCart,
+  Factory,
+  BarChart3,
   Bell,
   User,
-  LogOut
+  LogOut,
+  ClipboardPen
 } from 'lucide-react';
 import useStore from '../store/useStore';
 
@@ -28,6 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeModule, onModuleChange 
     { id: 'products', name: 'Productos', icon: Package },
     { id: 'sales', name: 'Ventas', icon: ShoppingCart },
     { id: 'production', name: 'Producción', icon: Factory },
+    { id: 'payroll', name: 'Planillas', icon: ClipboardPen },
   ];
 
   const criticalAlerts = alerts.filter(alert => alert.severity === 'high').length;
